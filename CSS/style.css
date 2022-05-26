@@ -211,3 +211,91 @@ a:hover {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
   }
+  .album_grid{
+
+    display: grid;
+    row-gap: 0% ;
+    grid-template-columns:23% 23% 23% 23% ; 
+    justify-content: space-between ; 
+    padding: 10px;
+    
+    
+    
+    /*align-content: space-between;*/ 
+    /*background-image: url("../images/wallpaperflare.com_wallpaper\(2\).jpg");
+    filter: blur(2px);
+    z-index: -1;
+    border-radius: 10px;
+  -webkit-filter: blur(8px);
+    background-repeat: no-repeat;*/
+    color: black;
+    border: 4px solid pink;
+    margin-top: 20px ;
+    height: 90%;
+      
+      
+  }
+  .album_grid_items{
+    position: relative  ;      
+      
+      color: black ;
+    /*border:2px solid black ; */      
+    border-radius: 10px ; 
+    height:270px ;
+    background-image: url("../images/folders1.png") ;
+    
+    background-repeat: no-repeat ;
+    background-color: rgb(226, 199, 139) ;
+  }
+
+  .album_grid_items:hover {
+      color: green;
+      height: 280px;
+      background-color: black ;      
+  }
+  #albumlinks{
+    color: black;
+  }
+  #albumlinks:hover{
+    color: blue ;   
+  }
+  .photo_grid{
+
+    display: grid;
+    row-gap: 0% ;
+    grid-template-columns:14% 14% 14% 14% 14% 14% ; 
+    justify-content: space-between ; 
+    padding: 10px;
+    
+    
+    
+    /*align-content: space-between;*/ 
+    /*background-image: url("../images/wallpaperflare.com_wallpaper\(2\).jpg");
+    filter: blur(2px);
+    z-index: -1;
+    border-radius: 10px;
+  -webkit-filter: blur(8px);
+    background-repeat: no-repeat;*/
+    color: black;
+    border: 4px solid pink;
+    margin-top: 20px ;
+    height: 90%;
+  }
+
+  .photo_grid_items{
+    /*If any problem occur in future then try to changes and remove the positions relative property from Heres */      
+    position: relative;
+      
+    color: black ;
+  /*border:2px solid black ; */      
+  border-radius: 10px ; 
+  height:200px ;
+  overflow: hidden;
+  background-size: contain;
+  /*background-image: url("../images/folders1.png") ;*/
+  
+  background-repeat: no-repeat ;
+  background-color: black ;
+}
+
+  
