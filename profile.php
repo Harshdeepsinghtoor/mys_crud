@@ -42,6 +42,13 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name'
                 <a href="logout.php" style="color:white;background-color:#E60000;font-weight:bolder;padding:4px">Log Out</a>
                 <a href="password.php" style="color:white;background-color:blue;font-weight:bolder;padding:4px">Change Password</a>
                 <a href="album.php" style="color:white;background-color:green;font-weight:bolder;padding:4px">Photo Album</a>
+                <!-- This is for Search Box -->
+                <form action="searchresults.php" method="post" style="display:inline ;">        
+
+                <input name="names" type="text" placeholder="type to search users ..." style="border-radius:4px ;padding:4px; border-right:0px;margin-right:0px;border:2px solid black;">
+                <input name="save" type="submit" value="&#x1F50E;" style="padding:4px ;border-left : 0px;margin-left:0px;">
+                </form>
+                <!-- Search Box Endings -->
 
                 <h1>Profile</h1>
                 <h2 style=color:orange>This data is coming Through Session Variable</h2>

@@ -1,5 +1,6 @@
 <div class="heading">
             <a href="index.php" style="text-decoration:none ;"><img style="height: 80%; width: 10em; margin: 1em; border-radius: 10px;" src="images/Loggo.jpg" alt="Logo"></a>
+            
             <div class="nav1">
                 <ul class="list">
                     <a href="index.php">
