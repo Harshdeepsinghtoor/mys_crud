@@ -29,7 +29,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name
                     <!-- This is for Search Box -->
                     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" style="display:inline ;">
 
-                        <input name="names" type="text" placeholder="type to search users ..." style="border-radius:4px ;padding:4px; border-right:0px;margin-right:0px;">
+                        <input name="names" type="text" placeholder="type to search users ..." value="<?php echo $_POST['names'] ;  ?>" style="border-radius:4px ;padding:4px; border-right:0px;margin-right:0px;">
                         <input name="save" type="submit" value="&#x1F50E;" style="padding:4px ;border-left : 0px;margin-left:0px;">
                     </form>
                     <!-- Search Box Endings -->
@@ -58,10 +58,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name
                                  <?php } 
                                  ?>
                                  
-                                <p style="display:inline ;position:absolute;top:0px;"><?php echo $row["name"] ; ?></p> 
-                                <span><?php echo $row["country"] ; ?></span>
+                                <p style="display:inline ;position:absolute;top:0px;"><?php echo $row["name"] ; ?></p>       
+                                <span><?php echo "from: ". $row["country"] ; ?></span>    
                                 </div>
-                                <hr>
+                                <hr>          
                                         
 
 

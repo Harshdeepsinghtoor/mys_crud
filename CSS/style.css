@@ -298,4 +298,17 @@ a:hover {
   background-color: black ;
 }
 
+#liveareas{
+
+  background-color:rgb(241, 218, 241) ;
+  /* border:1px solid black; */
+  /* font-weight:bold; */
+  font-family: sans-serif;
+  border-radius:0px 0px 5px 5px;
+   z-index:9;
+   position:absolute;
+   right:125px ;
+   width: 215px;
+}
+
   

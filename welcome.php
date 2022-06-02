@@ -21,7 +21,7 @@
             <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX THE CONTENT MAINS AREA OF THE PAGE IS STARTING FROM HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
             <div class="news">
                 <h1 style="color: green;">Welcome to Demo website</h1>
-                <h1 style="color: green;">Congratulations ! You have registerd successfully</h1>
+                <h1 style="color: green;">Congratulations ! You have registered successfully</h1>
                 <a href="login.php"><button class="button-29" role="button">LogIn</button></a><h1 style="display: inline;color:green"> to continue</h1>
                 
 

@@ -26,6 +26,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name
                 <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX THE CONTENT MAINS AREA OF THE PAGE IS STARTING FROM HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
                 <div class="news">
                     <h1> Update Your Profile</h1>
+                    
 
                     <?php ob_start();
                     //Validating Updates data like the registration validations
@@ -156,6 +157,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name
                         
 
                         <input name="updates" type="submit" value="Update Profile">
+                        <button type="button" onclick="javascript:history.back()">Cancel</button>
                         <p>To change password please <a href="password.php" style="color:blue">click here</a></p>
                     </form>
                     <?php include "updatesdata.php" ; ?>

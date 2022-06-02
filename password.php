@@ -69,7 +69,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name
                         <label for="cpass">Confirm New Password</label><br>
                         <input name="cpass" type="password">
                         <span class="errors">*<?php echo "$cpasserr"; ?></span> <br><br>
-                        <input name="changes" type="submit" value="Change Password"><br>
+                        <input name="changes" type="submit" value="Change Password">
+                        <button type="button" onclick="javascript:history.back()">Cancel</button>
+                        <br>
+                        
 
 
 

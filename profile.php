@@ -15,6 +15,24 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name'
     <title>Profile</title>
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA3PDTADaMDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAEiEAAAAAAAESIQAAAAAAASIiEAAAAAASIiIQAAAAARIhEiEAAAABIhASIRAAAAERAAEiEQAAAAAAABIhEAAAAAAAASIRAAAAAAAAEiEQAAAAAAABIhEAAAAAAAASIgAAAAAAAAERAAAAAAAAAAD//wAA+f8AAPD/AADg/wAA4H8AAMB/AACAPwAAhB8AAI4PAAD/BwAA/4MAAP/BAAD/4AAA//AAAP/4AAD//wAA" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="CSS/style.css">
+<!-- This is Jquery cdn for using Jquery in the Pages -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <!-- This is Javascript for using live search feature    -->
+    <script>
+        $(document).ready(function(){
+  $("#searchfield").keyup(function(){        
+    var searchvalues=$("#searchfield").val();
+    $.get("livesearch.php",{keys: searchvalues} ,function(data,status){
+        //This means that change the html of Areas and put the html intos the area which is recieved through the data parameter of the Callback Functions SWG
+       $("#liveareas").html(data);    
+       
+       
+    })
+  });
+});
+
+
+    </script>
 </head>
 
 <body>
@@ -26,7 +44,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name'
             <?php include "aelementss/sidebar.php" ; ?>
             <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX THE CONTENT MAINS AREA OF THE PAGE IS STARTING FROM HERE XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
             <div id="newsid">
-                <div id="upforms">
+                <div id="upforms" style="position:relative ;">      
                     <?php
                     
                 if(isset($_GET["password"])){
@@ -41,14 +59,16 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name'
 
                 <a href="logout.php" style="color:white;background-color:#E60000;font-weight:bolder;padding:4px">Log Out</a>
                 <a href="password.php" style="color:white;background-color:blue;font-weight:bolder;padding:4px">Change Password</a>
-                <a href="album.php" style="color:white;background-color:green;font-weight:bolder;padding:4px">Photo Album</a>
+                <a href="album.php" style="color:white;background-color:green;font-weight:bolder;padding:4px" onclick="alert('How are u')">Photo Album</a>
                 <!-- This is for Search Box -->
                 <form action="searchresults.php" method="post" style="display:inline ;">        
 
-                <input name="names" type="text" placeholder="type to search users ..." style="border-radius:4px ;padding:4px; border-right:0px;margin-right:0px;border:2px solid black;">
+                <input name="names" type="text" placeholder="type to search users ..." style="border-radius:4px ;padding:4px; border-right:0px;margin-right:0px;border:2px solid black;" autocomplete="off" id="searchfield">        
                 <input name="save" type="submit" value="&#x1F50E;" style="padding:4px ;border-left : 0px;margin-left:0px;">
+                <div id="liveareas"></div>         
                 </form>
                 <!-- Search Box Endings -->
+                <div id="belowlinks" style="position:absolute;">
 
                 <h1>Profile</h1>
                 <h2 style=color:orange>This data is coming Through Session Variable</h2>
@@ -91,6 +111,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name'
                 <p>Country : <b><?php echo $row["country"] ?></b></p>
                 <p>Profile Created : <b><?php echo $row["Dates"]; ?></b></p>
                 <br><a href="update.php"><button class="button-30" role="button">Update Profile</button></a>
+                </div>
 
                 </div>
 
