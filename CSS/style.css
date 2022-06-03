@@ -311,4 +311,40 @@ a:hover {
    width: 215px;
 }
 
+#livesearchlinks{
+color: black ;
+
+
+}
+
+
+#livesearchlinks:hover{
+color: white ;       
+
+
+
+}
+
+#normalssearchlinks{
+color: black ;
+
+}
+
+#normalssearchlinks:hover{
+  color:white ;
+  background-color: Black   ;        
+
+
+
+
+}
+#searchlinksp{
+  display:inline ;
+  position:absolute;
+  top:0px;
+}
+#searchlinksp:hover{
+  background-color: Black    ;
+}
+
   

@@ -58,8 +58,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name
                                  <?php } 
                                  ?>
                                  
-                                <p style="display:inline ;position:absolute;top:0px;"><?php echo $row["name"] ; ?></p>       
-                                <span><?php echo "from: ". $row["country"] ; ?></span>    
+                                <a href="friendsprofile.php?id=<?php echo $row['id']  ; ?>" id="normalssearchlinks"><p id="searchlinksp"><?php echo $row["name"] ; ?></p>  </a>     
+                                <span><?php echo "from: ". $row["country"] ; ?></span>      
                                 </div>
                                 <hr>          
                                         
