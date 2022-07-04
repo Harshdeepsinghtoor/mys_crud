@@ -15,6 +15,24 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name
         <title>Search Results </title>
         <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA3PDTADaMDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAEiEAAAAAAAESIQAAAAAAASIiEAAAAAASIiIQAAAAARIhEiEAAAABIhASIRAAAAERAAEiEQAAAAAAABIhEAAAAAAAASIRAAAAAAAAEiEQAAAAAAABIhEAAAAAAAASIgAAAAAAAAERAAAAAAAAAAD//wAA+f8AAPD/AADg/wAA4H8AAMB/AACAPwAAhB8AAI4PAAD/BwAA/4MAAP/BAAD/4AAA//AAAP/4AAD//wAA" rel="icon" type="image/x-icon" />
         <link rel="stylesheet" href="CSS/style.css">
+        <!-- This is Jquery cdn for using Jquery in the Pages -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <!-- This is Javascript for using live search feature    -->
+    <script>
+        $(document).ready(function(){
+  $("#searchfield").keyup(function(){        
+    var searchvalues=$("#searchfield").val();
+    $.get("livesearch.php",{keys: searchvalues} ,function(data,status){
+        //This means that change the html of Areas and put the html intos the area which is recieved through the data parameter of the Callback Functions SWG
+       $("#liveareassrl").html(data);    
+       
+       
+    })
+  });
+});
+
+
+    </script>
     </head>
 
     <body>
@@ -29,8 +47,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name
                     <!-- This is for Search Box -->
                     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" style="display:inline ;">
 
-                        <input name="names" type="text" placeholder="type to search users ..." value="<?php echo $_POST['names'] ;  ?>" style="border-radius:4px ;padding:4px; border-right:0px;margin-right:0px;">
+                        <input name="names" type="text" placeholder="type to search users ..." value="<?php echo $_POST['names'] ;  ?>" style="border-radius:4px ;padding:4px; border-right:0px;margin-right:0px;" id="searchfield" autocomplete="off">       
                         <input name="save" type="submit" value="&#x1F50E;" style="padding:4px ;border-left : 0px;margin-left:0px;">
+                        <div id="liveareassrl"></div>
                     </form>
                     <!-- Search Box Endings -->
                     <!-- Writing Codes for getting the search Results  -->

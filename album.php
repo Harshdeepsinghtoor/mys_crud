@@ -51,7 +51,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name
 
                                 <a href="inside_album.php?albumid=<?php echo $row["album_id"] ;   ?>" id="albumlinks"><h2 style="text-align:center ; "> <?php echo $row["albname"]; ?></h2> </a>  
                                     <p style="text-align:center ; "> <?php echo $row["albdescriptionss"]; ?></p>
-                                    <a href="deletealbum.php?albumid=<?php echo $row["album_id"] ;   ?>" class="errors" style="position:absolute; bottom:0px;">Delete Album</a>         
+                                    <a href="deletealbum.php?albumid=<?php echo $row["album_id"] ;   ?>" class="errors" style="position:absolute; bottom:0px;" onclick="return confirm('Are you sure ?')">Delete Album</a>         
 
 
                                 </div>
@@ -59,7 +59,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name
                             <?php } ?>
 
                         <?php } else {
-                            echo "<h1>No Albums Found</h1> ";
+                            echo "<h1>Harsh</h1> ";
                         }
 
 

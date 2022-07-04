@@ -27,7 +27,7 @@
 
                      <?php if(isset($_SESSION['id'])){ ?>
 
-                    <a href="logout.php" onclick="confirm('Confirm')">
+                    <a href="logout.php" onclick="return confirm('Are you sure ?')">     
                         <li>Log Out</li>
                     </a>
                     <?php }else{ ?>

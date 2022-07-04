@@ -46,7 +46,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name
                                <!-- <img src="albumsimages/<?php //echo $row['photo_names']; ?>" alt="Image" >  -->
                                      
                                     <p style="text-align:center ; "> <?php echo $row["photo_id"]; ?></p>
-                                    <a href="deletephoto.php?photoid= <?php echo $row['photo_id'] ; ?>" class="errors" style="position:absolute;bottom:0px;">Delete</a>
+                                    <a href="deletephoto.php?photoid= <?php echo $row['photo_id'] ; ?>" class="errors" style="position:absolute;bottom:0px;" onclick="return confirm('Are you sure ?')">Delete</a>
 
 
                                 </div>

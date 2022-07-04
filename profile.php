@@ -15,7 +15,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name'
     <title>Profile</title>
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA3PDTADaMDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAEiEAAAAAAAESIQAAAAAAASIiEAAAAAASIiIQAAAAARIhEiEAAAABIhASIRAAAAERAAEiEQAAAAAAABIhEAAAAAAAASIRAAAAAAAAEiEQAAAAAAABIhEAAAAAAAASIgAAAAAAAAERAAAAAAAAAAD//wAA+f8AAPD/AADg/wAA4H8AAMB/AACAPwAAhB8AAI4PAAD/BwAA/4MAAP/BAAD/4AAA//AAAP/4AAD//wAA" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="CSS/style.css">
-<!-- This is Jquery cdn for using Jquery in the Pages -->
+<!-- This is Jquery cdn for using Jquery in the Pages -->      
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
     <!-- This is Javascript for using live search feature    -->
     <script>
@@ -59,7 +59,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name'
 
                 <a href="logout.php" style="color:white;background-color:#E60000;font-weight:bolder;padding:4px">Log Out</a>
                 <a href="password.php" style="color:white;background-color:blue;font-weight:bolder;padding:4px">Change Password</a>
-                <a href="album.php" style="color:white;background-color:green;font-weight:bolder;padding:4px" onclick="alert('How are u')">Photo Album</a>
+                <a href="album.php" style="color:white;background-color:green;font-weight:bolder;padding:4px" >Photo Album</a>
                 <!-- This is for Search Box -->
                 <form action="searchresults.php" method="post" style="display:inline ;">        
 
@@ -133,7 +133,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name'
                         <input type="file" name="photo" id=""><br>
                         <input type="submit" name="upload" value= <?php if(!isset($row["photo"])){echo '"Upload Photo"';}else{echo '"Change Profile Photo"';} ?>>
                     </form><br>
-                    <a href="removedp.php" style="color:white;background-color:#E60000;font-weight:bolder;padding:4px;width:130px;margin-top:10px;">Remove Photo</a>
+                    <a href="removedp.php" style="color:white;background-color:#E60000;font-weight:bolder;padding:4px;width:130px;margin-top:10px;" onclick="return confirm('Are you sure ?')">Remove Photo</a>
                     
                 </div>
                 

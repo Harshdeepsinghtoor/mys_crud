@@ -22,7 +22,7 @@
             <div class="news">
                 <h1>About Us</h1>
 
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem consequatur iste tenetur, provident
+                <p  class="parafirstletter" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem consequatur iste tenetur, provident
                     minus dicta error praesentium impedit? Ipsum sit numquam sunt accusamus totam, debitis dolor qui hic
                     optio culpa illo nemo. Recusandae iste temporibus, earum ducimus quas dolorem accusamus architecto
                     ut deleniti repellat veniam qui eligendi sint tempore. Corporis consequuntur pariatur cumque,

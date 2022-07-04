@@ -156,7 +156,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name
 
                         
 
-                        <input name="updates" type="submit" value="Update Profile">
+                        <input name="updates" type="submit" value="Update Profile" onclick="return confirm('Are you sure ?')">
                         <button type="button" onclick="javascript:history.back()">Cancel</button>
                         <p>To change password please <a href="password.php" style="color:blue">click here</a></p>
                     </form>

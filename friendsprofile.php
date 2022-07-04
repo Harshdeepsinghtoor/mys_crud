@@ -17,6 +17,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name'
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    
 </head>
 
 <body>
@@ -56,18 +57,25 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['name'
 
 
                 ?>
+                <!-- Experimentingss the code to convert into dayss -->
+                <?php
+                $dateOfBirth = $row["Dates"];
+                $today = date("Y-m-d");
+                $diff = date_diff(date_create($dateOfBirth), date_create($today));
+                $daysago=$diff->format('%a').' days ago';
+                ?>
                 <h1 style="color:Orange ;"><?php echo $row["name"]; ?></h1>
                 <p>Name : <b><?php echo $row["name"]; ?></b></p>
-                <p>Email : <b><?php echo $row["email"]; ?></b></p>
-                <p>Contact : <b><?php echo $row["contact"] ?>  <i class="fa fa-phone-square" style="font-size:16px"></i> </b></p>     
-                <p>Gender : <b><?php echo $row["gender"] ?></b></p>
-                <p>Hobbies : <b><?php echo $row["hobbies"] ?></b></p>
-                <p>Country : <b><?php echo $row["country"] ?> <i class="fa fa-home"></i>  </b></p>
-                <p>Profile Created : <b><?php echo $row["Dates"]; ?></b></p>
-                <br><a href="#"><button class="button-30" role="button"> <pre>Send Request </pre><i class="fa fa-send-o"></i> </button></a>     
-                <a href="#"><button class="button-30" role="button"><pre>Message </pre><i class="fa fa-envelope"></i> </button></a>
+                <p>Email : <b> <i class="fa fa-envelope"></i>  <?php echo $row["email"]; ?></b></p>
+                <p>Contact : <b> <i class="fa fa-phone-square" style="font-size:16px"></i>  <?php echo $row["contact"] ?>   </b></p>     
+                <p>Gender : <b> <i class="fa fa-<?php if($row['gender']=='male'){echo 'male';}else{echo 'female';} ?>"></i>  <?php echo $row["gender"] ?></b></p>
+                <p>Hobbies : <b> <img src="images/painting.png" alt="Image" style="width:16px ;height:16px ;">  <?php echo $row["hobbies"] ?></b></p>
+                <p>Country : <b>  <i class="fa fa-home"></i> <?php echo $row["country"] ?>   </b></p>
+                <p>Profile Created : <b> <i class="fa fa-calendar"></i>  <?php echo $row["Dates"].' ('. $daysago . ')'; ?>   </b></p>       
+                <br><a href="#"><button class="button-30" role="button"> <pre>Send Request </pre> <img src="images/icons8-add-user-group-man-man-50.png" alt="Imagess" width="18px" height="18px"> </button></a>     
+                <a href="#"><button class="button-30" role="button"><pre>Message </pre>  <i class="fa fa-send-o"></i>       </button></a>
+                
                 </div>
-
                 </div>
 
                 <div id="profile">

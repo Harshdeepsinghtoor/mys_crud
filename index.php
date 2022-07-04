@@ -19,8 +19,8 @@
         <div class="main">
             <?php include "aelementss/sidebar.php" ; ?>
             <div class="news">
-                <h1>This is a Demo text</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem consequatur iste tenetur, provident
+                <h1>This is a Demo text</h1>       
+                <p class="parafirstletter">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem consequatur iste tenetur, provident
                     minus dicta error praesentium impedit? Ipsum sit numquam sunt accusamus totam, debitis dolor qui hic
                     optio culpa illo nemo. Recusandae iste temporibus, earum ducimus quas dolorem accusamus architecto
                     ut deleniti repellat veniam qui eligendi sint tempore. Corporis consequuntur pariatur cumque,
